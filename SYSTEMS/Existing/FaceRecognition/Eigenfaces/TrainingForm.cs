@@ -1,22 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 
-using Emgu.CV.UI;
 using Emgu.CV;
 using Emgu.CV.Structure;
-using Emgu.CV.CvEnum;
 
 using System.IO;
 using System.Drawing.Imaging;
 using System.Xml;
 using System.Threading;
 
+//Unused Libraries
+//using Emgu.CV.CvEnum;
+//using System.Linq;
+//using System.Text;
+//using System.ComponentModel;
+//using System.Data;
+//using Emgu.CV.UI;
 
 namespace FaceRecognition
 {
@@ -102,18 +103,12 @@ namespace FaceRecognition
                 gray_frame = currentFrame.Convert<Gray, Byte>();
 
                 //Face Detector
-                //MCvAvgComp[][] facesDetected = gray_frame.DetectHaarCascade(Face, 1.2, 10, Emgu.CV.CvEnum.HAAR_DETECTION_TYPE.DO_CANNY_PRUNING, new Size(20, 20)); //old method
                 Rectangle[] facesDetected = Face.DetectMultiScale(gray_frame, 1.2, 10, new Size(50, 50), Size.Empty);
                 Rectangle face = new Rectangle();
+                //Action for each element detected
                 try
                 {
                     face = facesDetected[0];
-                }
-                catch (Exception)
-                {
-
-                }
-                //Action for each element detected
                     face.X += (int)(face.Height * 0.15);
                     face.Y += (int)(face.Width * 0.22);
                     face.Height -= (int)(face.Height * 0.3);
@@ -122,26 +117,35 @@ namespace FaceRecognition
                     result = currentFrame.Copy(face).Convert<Gray, byte>().Resize(100, 100, Emgu.CV.CvEnum.Inter.Cubic);
                     result._EqualizeHist();
                     face_PICBX.Image = result.ToBitmap();
+                    //draw the face detected in the 0th (gray) channel with blue color
                     currentFrame.Draw(face, new Bgr(Color.Red), 2);
 
-                
-                if (RECORD && facesDetected.Length > 0 && resultImages.Count < num_faces_to_aquire)
-                {
-                    resultImages.Add(result);
-                    count_lbl.Text = "Count: " + resultImages.Count.ToString();
-                    if (resultImages.Count == num_faces_to_aquire)
+                    if (RECORD && facesDetected.Length > 0 && resultImages.Count < num_faces_to_aquire)
                     {
-                        ADD_BTN.Enabled = true;
-                        NEXT_BTN.Visible = true;
-                        PREV_btn.Visible = true;
-                        count_lbl.Visible = false;
-                        Single_btn.Visible = true;
-                        ADD_ALL.Visible = true;
-                        RECORD = false;
-                        Application.Idle -= new EventHandler(FrameGrabber);
+                        resultImages.Add(result);
+                        count_lbl.Text = "Count: " + resultImages.Count.ToString();
+                        if (resultImages.Count == num_faces_to_aquire)
+                        {
+                            ADD_BTN.Enabled = true;
+                            NEXT_BTN.Visible = true;
+                            PREV_btn.Visible = true;
+                            count_lbl.Visible = false;
+                            Single_btn.Visible = true;
+                            ADD_ALL.Visible = true;
+                            RECORD = false;
+                            Application.Idle -= new EventHandler(FrameGrabber);
+                        }
                     }
+                    
                 }
+                catch
+                {
+                    //do nothing as parrellel loop buggy
+                    //No action as the error is useless, it is simply an error in 
+                    //no data being there to process and this occurss sporadically 
 
+                }
+                
                 image_PICBX.Image = currentFrame.ToBitmap();
             }
         }

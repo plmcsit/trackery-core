@@ -1,24 +1,26 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 
-using Emgu.CV.UI;
+
 using Emgu.CV;
 using Emgu.CV.Structure;
 using Emgu.CV.CvEnum;
 
-using System.IO;
-using System.Xml;
-using System.Runtime.InteropServices;
-using System.Threading;
-using System.Security.Principal;
-using System.Threading.Tasks;
-using Microsoft.Win32.SafeHandles;
+//Unused Libraries
+//using System.Data;
+//using System.Linq;
+//using System.Text;
+//using Emgu.CV.UI;
+//using System.IO;
+//using System.Xml;
+//using System.Runtime.InteropServices;
+//using System.Collections.Generic;
+//using System.ComponentModel;
+//using System.Threading;
+//using System.Security.Principal;
+//using System.Threading.Tasks;
+//using Microsoft.Win32.SafeHandles;
 
 namespace FaceRecognition
 {
@@ -43,7 +45,8 @@ namespace FaceRecognition
         public MainForm()
         {
             InitializeComponent();
-
+            Eigen_Recog.Recognizer_Type = "EMGU.CV.EigenFaceRecognizer";
+            Eigen_Recog.Retrain();
             //Load of previus trainned faces and labels for each image
 
             if (Eigen_Recog.IsTrained)
@@ -87,79 +90,19 @@ namespace FaceRecognition
         {
             grabber = new Capture();
             grabber.QueryFrame();
-            //Initialize the FrameGraber event
-            if (parrellelToolStripMenuItem.Checked)
-            {
-                Application.Idle += new EventHandler(FrameGrabber_Parrellel);
-            }
-            else
-            {
-                Application.Idle += new EventHandler(FrameGrabber_Standard);
-            }
+            Application.Idle += new EventHandler(FrameGrabber);
         }
         private void stop_capture()
         {
-            if (parrellelToolStripMenuItem.Checked)
-            {
-                Application.Idle -= new EventHandler(FrameGrabber_Parrellel);
-            }
-            else
-            {
-                Application.Idle -= new EventHandler(FrameGrabber_Standard);
-            }
+            Application.Idle -= new EventHandler(FrameGrabber);
             if (grabber != null)
             {
                 grabber.Dispose();
             }
         }
 
-        //Process Frame
-        void FrameGrabber_Standard(object sender, EventArgs e)
-        {
-            //Get the current frame form capture device
-            currentFrame = grabber.QueryFrame().ToImage<Bgr, byte>().Resize(320, 240, Emgu.CV.CvEnum.Inter.Cubic);
 
-            //Convert it to Grayscale
-            if (currentFrame != null)
-            {
-                gray_frame = currentFrame.Convert<Gray, Byte>();
-
-                //Face Detector
-                Rectangle[] facesDetected = Face.DetectMultiScale(gray_frame, 1.2, 10, new Size(50, 50), Size.Empty);
-                Rectangle face = facesDetected[0];
-                //Action for each element detected
-                
-                    face.X += (int)(face.Height * 0.15);
-                    face.Y += (int)(face.Width * 0.22);
-                    face.Height -= (int)(face.Height * 0.3);
-                    face.Width -= (int)(face.Width * 0.35);
-
-                    result = currentFrame.Copy(face).Convert<Gray, byte>().Resize(130, 130, Emgu.CV.CvEnum.Inter.Cubic);
-                    result._EqualizeHist();
-                    //draw the face detected in the 0th (gray) channel with blue color
-                    currentFrame.Draw(face, new Bgr(Color.Blue), 2);
-
-                    if (Eigen_Recog.IsTrained)
-                    {
-                        string name = Eigen_Recog.Recognise(result);
-                        int match_value = (int)Eigen_Recog.Get_Eigen_Distance;
-
-                        //Draw the label for each face detected and recognized
-
-                        CvInvoke.PutText(currentFrame,
-                        name + " ",
-                        new System.Drawing.Point(face.X - 2, face.Y - 2),
-                        FontFace.HersheyComplex, 0.5,
-                        new Bgr(Color.LightGreen).MCvScalar);
-                        ADD_Face_Found(result, name, match_value);
-                    }
-                
-                //Show the faces procesed and recognized
-                image_PICBX.Image = currentFrame.ToBitmap();
-            }
-        }
-
-        void FrameGrabber_Parrellel(object sender, EventArgs e)
+        void FrameGrabber(object sender, EventArgs e)
         {
             //Get the current frame form capture device
             currentFrame = grabber.QueryFrame().ToImage<Bgr, byte>().Resize(320, 240, Emgu.CV.CvEnum.Inter.Cubic);
@@ -172,15 +115,12 @@ namespace FaceRecognition
                 gray_frame = currentFrame.Convert<Gray, Byte>();
                 //Face Detector
                 Rectangle[] facesDetected = Face.DetectMultiScale(gray_frame, 1.2, 10, new Size(50, 50), Size.Empty);
-
-                //   CircleF eyeDetected = eye
+                Rectangle face = new Rectangle();
+                //CircleF eyeDetected = eye;
                 //Action for each element detected
-               
                     try
                     {
-                    Rectangle face = new Rectangle();
-                    face = facesDetected[0];
-
+                        face = facesDetected[0];
                         face.X += (int)(face.Height * 0.15);
                         face.Y += (int)(face.Width * 0.22);
                         face.Height -= (int)(face.Height * 0.3);
@@ -201,7 +141,7 @@ namespace FaceRecognition
                             name + " ",
                             new System.Drawing.Point(face.X - 2, face.Y - 2),
                             FontFace.HersheyComplex, 0.5,
-                            new Bgr(Color.LightGreen).MCvScalar);
+                            new Bgr(Color.LightBlue).MCvScalar);
                             //  ADD_Face_Found(result, name, match_value);
 
                         }
@@ -268,37 +208,12 @@ namespace FaceRecognition
         {
             this.Dispose();
         }
-        private void singleToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            parrellelToolStripMenuItem.Checked = false;
-            singleToolStripMenuItem.Checked = true;
-            Application.Idle -= new EventHandler(FrameGrabber_Parrellel);
-            Application.Idle += new EventHandler(FrameGrabber_Standard);
-        }
-        private void parrellelToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            parrellelToolStripMenuItem.Checked = true;
-            singleToolStripMenuItem.Checked = false;
-            Application.Idle -= new EventHandler(FrameGrabber_Standard);
-            Application.Idle += new EventHandler(FrameGrabber_Parrellel);
-
-        }
+        
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SaveFileDialog SF = new SaveFileDialog();
-            //As there is no identification in files to recogniser type we will set the extension ofthe file to tell us
-            switch (Eigen_Recog.Recognizer_Type)
-            {
-                case ("EMGU.CV.LBPHFaceRecognizer"):
-                    SF.Filter = "LBPHFaceRecognizer File (*.LBPH)|*.LBPH";
-                    break;
-                case ("EMGU.CV.FisherFaceRecognizer"):
-                    SF.Filter = "FisherFaceRecognizer File (*.FFR)|*.FFR";
-                    break;
-                case ("EMGU.CV.EigenFaceRecognizer"):
-                    SF.Filter = "EigenFaceRecognizer File (*.EFR)|*.EFR";
-                    break;
-            }
+            SF.Filter = "EigenFaceRecognizer File (*.EFR)|*.EFR";
+             
             if (SF.ShowDialog() == DialogResult.OK)
             {
                 Eigen_Recog.Save_Eigen_Recogniser(SF.FileName);
@@ -307,7 +222,7 @@ namespace FaceRecognition
         private void loadToolStripMenuItem_Click(object sender, EventArgs e)
         {
             OpenFileDialog OF = new OpenFileDialog();
-            OF.Filter = "EigenFaceRecognizer File (*.EFR)|*.EFR|LBPHFaceRecognizer File (*.LBPH)|*.LBPH|FisherFaceRecognizer File (*.FFR)|*.FFR";
+            OF.Filter = "EigenFaceRecognizer File (*.EFR)|*.EFR";
             if (OF.ShowDialog() == DialogResult.OK)
             {
                 Eigen_Recog.Load_Eigen_Recogniser(OF.FileName);
@@ -327,36 +242,7 @@ namespace FaceRecognition
                 message_bar.Text = "Error in Threshold input please use int";
             }
         }
-
-        private void eigenToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            //Uncheck other menu items
-            fisherToolStripMenuItem.Checked = false;
-            lBPHToolStripMenuItem.Checked = false;
-
-            Eigen_Recog.Recognizer_Type = "EMGU.CV.EigenFaceRecognizer";
-            Eigen_Recog.Retrain();
-        }
-
-        private void fisherToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            //Uncheck other menu items
-            lBPHToolStripMenuItem.Checked = false;
-            eigenToolStripMenuItem.Checked = false;
-
-            Eigen_Recog.Recognizer_Type = "EMGU.CV.FisherFaceRecognizer";
-            Eigen_Recog.Retrain();
-        }
-
-        private void lBPHToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            //Uncheck other menu items
-            fisherToolStripMenuItem.Checked = false;
-            eigenToolStripMenuItem.Checked = false;
-
-            Eigen_Recog.Recognizer_Type = "EMGU.CV.LBPHFaceRecognizer";
-            Eigen_Recog.Retrain();
-        }
+        
     }
 }
 

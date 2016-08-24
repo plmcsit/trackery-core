@@ -29,7 +29,7 @@ namespace FaceRecognition
         int ContTrain, NumLabels;
         float Eigen_Distance = 0;
         string Eigen_label;
-        int Eigen_threshold = 2000;
+        int Eigen_threshold = 1500;
 
         //Class Variables
         string Error;
@@ -110,22 +110,9 @@ namespace FaceRecognition
 
                     //Only use the post threshold rule if we are using an Eigen Recognizer 
                     //since Fisher and LBHP threshold set during the constructor will work correctly 
-                    switch (Recognizer_Type)
-                    {
-                        case ("EMGU.CV.EigenFaceRecognizer"):
-                            if (Eigen_Distance > Eigen_threshold) return Eigen_label;
-                            else return "Unknown";
-                        case ("EMGU.CV.LBPHFaceRecognizer"):
-                        case ("EMGU.CV.FisherFaceRecognizer"):
-                        default:
-                            return Eigen_label; //the threshold set in training controls unknowns
-                    }
-
-
-
-
+                    if (Eigen_Distance > Eigen_threshold) return Eigen_label;
+                    else return "Unknown";
                 }
-
             }
             else return "";
         }
@@ -211,22 +198,10 @@ namespace FaceRecognition
         {
             //Lets get the recogniser type from the file extension
             string ext = Path.GetExtension(filename);
-            switch (ext)
-            {
-                case (".LBPH"):
-                    Recognizer_Type = "EMGU.CV.LBPHFaceRecognizer";
-                    recognizer = new LBPHFaceRecognizer(1, 8, 8, 8, 100);//50
-                    break;
-                case (".FFR"):
-                    Recognizer_Type = "EMGU.CV.FisherFaceRecognizer";
-                    recognizer = new FisherFaceRecognizer(0, 3500);//4000
-                    break;
-                case (".EFR"):
-                    Recognizer_Type = "EMGU.CV.EigenFaceRecognizer";
-                    recognizer = new EigenFaceRecognizer(80, double.PositiveInfinity);
-                    break;
-            }
-
+            Recognizer_Type = "EMGU.CV.EigenFaceRecognizer";
+            recognizer = new EigenFaceRecognizer(80, double.PositiveInfinity);
+                    
+            
             //introduce error checking
             recognizer.Load(filename);
 
@@ -355,31 +330,13 @@ namespace FaceRecognition
                         //          0 - X = unknown
                         //          > X = Recognised
                         //
-                        //Fisher and LBPH Use
-                        //          0 - X = Recognised
-                        //          > X = Unknown
-                        //
                         // Where X = Threshold value
 
 
-                        switch (Recognizer_Type)
-                        {
-                            case ("EMGU.CV.LBPHFaceRecognizer"):
-                                recognizer = new LBPHFaceRecognizer(1, 8, 8, 8, 100);//50
-                                break;
-                            case ("EMGU.CV.FisherFaceRecognizer"):
-                                recognizer = new FisherFaceRecognizer(0, 3500);//4000
-                                break;
-                            case ("EMGU.CV.EigenFaceRecognizer"):
-                            default:
-                                recognizer = new EigenFaceRecognizer(80, double.PositiveInfinity);
-                                break;
-                        }
-
+                        
+                        recognizer = new EigenFaceRecognizer(80, double.PositiveInfinity);
                         recognizer.Train(trainingImages.ToArray(), Names_List_ID.ToArray());
-                        // Recognizer_Type = recognizer.GetType();
-                        // string v = recognizer.ToString(); //EMGU.CV.FisherFaceRecognizer || EMGU.CV.EigenFaceRecognizer || EMGU.CV.LBPHFaceRecognizer
-
+                        
                         return true;
                     }
                     else return false;

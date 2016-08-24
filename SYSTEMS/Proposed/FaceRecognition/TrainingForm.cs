@@ -104,24 +104,27 @@ namespace FaceRecognition
                 //Face Detector
                 //MCvAvgComp[][] facesDetected = gray_frame.DetectHaarCascade(Face, 1.2, 10, Emgu.CV.CvEnum.HAAR_DETECTION_TYPE.DO_CANNY_PRUNING, new Size(20, 20)); //old method
                 Rectangle[] facesDetected = Face.DetectMultiScale(gray_frame, 1.2, 10, new Size(50, 50), Size.Empty);
-
-                //Action for each element detected
-                for (int i = 0; i < facesDetected.Length; i++)// (Rectangle face_found in facesDetected)
+                Rectangle face = new Rectangle();
+                try
                 {
-                    //This will focus in on the face from the haar results its not perfect but it will remove a majoriy
-                    //of the background noise
-                    facesDetected[i].X += (int)(facesDetected[i].Height * 0.15);
-                    facesDetected[i].Y += (int)(facesDetected[i].Width * 0.22);
-                    facesDetected[i].Height -= (int)(facesDetected[i].Height * 0.3);
-                    facesDetected[i].Width -= (int)(facesDetected[i].Width * 0.35);
-
-                    result = currentFrame.Copy(facesDetected[i]).Convert<Gray, byte>().Resize(100, 100, Emgu.CV.CvEnum.Inter.Cubic);
-                    result._EqualizeHist();
-                    face_PICBX.Image = result.ToBitmap();
-                    //draw the face detected in the 0th (gray) channel with blue color
-                    currentFrame.Draw(facesDetected[i], new Bgr(Color.Red), 2);
+                    face = facesDetected[0];
+                }
+                catch (Exception)
+                {
 
                 }
+                //Action for each element detected
+                    face.X += (int)(face.Height * 0.15);
+                    face.Y += (int)(face.Width * 0.22);
+                    face.Height -= (int)(face.Height * 0.3);
+                    face.Width -= (int)(face.Width * 0.35);
+
+                    result = currentFrame.Copy(face).Convert<Gray, byte>().Resize(100, 100, Emgu.CV.CvEnum.Inter.Cubic);
+                    result._EqualizeHist();
+                    face_PICBX.Image = result.ToBitmap();
+                    currentFrame.Draw(face, new Bgr(Color.Red), 2);
+
+                
                 if (RECORD && facesDetected.Length > 0 && resultImages.Count < num_faces_to_aquire)
                 {
                     resultImages.Add(result);
