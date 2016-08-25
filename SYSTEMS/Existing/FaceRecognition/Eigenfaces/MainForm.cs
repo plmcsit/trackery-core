@@ -70,6 +70,8 @@ namespace FaceRecognition
             //OpenForm
             TrainingForm TF = new TrainingForm(this);
             TF.Show();
+            this.WindowState = FormWindowState.Minimized;
+
         }
         public void retrain()
         {
@@ -209,26 +211,29 @@ namespace FaceRecognition
             this.Dispose();
         }
         
-        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            SaveFileDialog SF = new SaveFileDialog();
-            SF.Filter = "EigenFaceRecognizer File (*.EFR)|*.EFR";
-             
-            if (SF.ShowDialog() == DialogResult.OK)
-            {
-                Eigen_Recog.Save_Eigen_Recogniser(SF.FileName);
-            }
-        }
-        private void loadToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog OF = new OpenFileDialog();
-            OF.Filter = "EigenFaceRecognizer File (*.EFR)|*.EFR";
-            if (OF.ShowDialog() == DialogResult.OK)
-            {
-                Eigen_Recog.Load_Eigen_Recogniser(OF.FileName);
-            }
-        }
+        
+        //private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        //{
+        //    SaveFileDialog SF = new SaveFileDialog();
+        //    SF.Filter = "EigenFaceRecognizer File (*.EFR)|*.EFR";
 
+        //    if (SF.ShowDialog() == DialogResult.OK)
+        //    {
+        //        Eigen_Recog.Save_Eigen_Recogniser(SF.FileName);
+        //    }
+        //}
+
+        //private void loadToolStripMenuItem_Click(object sender, EventArgs e)
+        //{
+        //    OpenFileDialog OF = new OpenFileDialog();
+        //    OF.Filter = "EigenFaceRecognizer File (*.EFR)|*.EFR";
+        //    if (OF.ShowDialog() == DialogResult.OK)
+        //    {
+        //        Eigen_Recog.Load_Eigen_Recogniser(OF.FileName);
+        //    }
+        //}
+
+        
         //Unknow Eigen face calibration
         private void Eigne_threshold_txtbxChanged(object sender, EventArgs e)
         {

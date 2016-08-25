@@ -29,7 +29,7 @@ namespace FaceRecognition
         int ContTrain, NumLabels;
         float Eigen_Distance = 0;
         string Eigen_label;
-        int Eigen_threshold = 1500;
+        int Eigen_threshold = 1800;
 
         //Class Variables
         string Error;
@@ -159,87 +159,6 @@ namespace FaceRecognition
         public string Get_Error
         {
             get { return Error; }
-        }
-
-        /// <summary>
-        /// Saves the trained Eigen Recogniser to specified location
-        /// </summary>
-        /// <param name="filename"></param>
-        public void Save_Eigen_Recogniser(string filename)
-        {
-            recognizer.Save(filename);
-
-            //save label data as this isn't saved with the network
-            string direct = Path.GetDirectoryName(filename);
-            FileStream Label_Data = File.OpenWrite(direct + "/Labels.xml");
-            using (XmlWriter writer = XmlWriter.Create(Label_Data))
-            {
-                writer.WriteStartDocument();
-                writer.WriteStartElement("Labels_For_Recognizer_sequential");
-                for (int i = 0; i < Names_List.Count; i++)
-                {
-                    writer.WriteStartElement("LABEL");
-                    writer.WriteElementString("POS", i.ToString());
-                    writer.WriteElementString("NAME", Names_List[i]);
-                    writer.WriteEndElement();
-                }
-
-                writer.WriteEndElement();
-                writer.WriteEndDocument();
-            }
-            Label_Data.Close();
-        }
-
-        /// <summary>
-        /// Loads the trained Eigen Recogniser from specified location
-        /// </summary>
-        /// <param name="filename"></param>
-        public void Load_Eigen_Recogniser(string filename)
-        {
-            //Lets get the recogniser type from the file extension
-            string ext = Path.GetExtension(filename);
-            Recognizer_Type = "EMGU.CV.EigenFaceRecognizer";
-            recognizer = new EigenFaceRecognizer(80, double.PositiveInfinity);
-                    
-            
-            //introduce error checking
-            recognizer.Load(filename);
-
-            //Now load the labels
-            string direct = Path.GetDirectoryName(filename);
-            Names_List.Clear();
-            if (File.Exists(direct + "/Labels.xml"))
-            {
-                FileStream filestream = File.OpenRead(direct + "/Labels.xml");
-                long filelength = filestream.Length;
-                byte[] xmlBytes = new byte[filelength];
-                filestream.Read(xmlBytes, 0, (int)filelength);
-                filestream.Close();
-
-                MemoryStream xmlStream = new MemoryStream(xmlBytes);
-
-                using (XmlReader xmlreader = XmlTextReader.Create(xmlStream))
-                {
-                    while (xmlreader.Read())
-                    {
-                        if (xmlreader.IsStartElement())
-                        {
-                            switch (xmlreader.Name)
-                            {
-                                case "NAME":
-                                    if (xmlreader.Read())
-                                    {
-                                        Names_List.Add(xmlreader.Value.Trim());
-                                    }
-                                    break;
-                            }
-                        }
-                    }
-                }
-                ContTrain = NumLabels;
-            }
-            _IsTrained = true;
-
         }
 
         /// <summary>

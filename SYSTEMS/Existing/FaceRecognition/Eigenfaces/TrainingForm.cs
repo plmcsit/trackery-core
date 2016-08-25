@@ -123,15 +123,15 @@ namespace FaceRecognition
                     if (RECORD && facesDetected.Length > 0 && resultImages.Count < num_faces_to_aquire)
                     {
                         resultImages.Add(result);
-                        count_lbl.Text = "Count: " + resultImages.Count.ToString();
+                        //count_lbl.Text = "Count: " + resultImages.Count.ToString();
                         if (resultImages.Count == num_faces_to_aquire)
                         {
                             ADD_BTN.Enabled = true;
-                            NEXT_BTN.Visible = true;
-                            PREV_btn.Visible = true;
-                            count_lbl.Visible = false;
+                            //NEXT_BTN.Visible = true;
+                            //PREV_btn.Visible = true;
+                            //count_lbl.Visible = false;
                             Single_btn.Visible = true;
-                            ADD_ALL.Visible = true;
+                            //ADD_ALL.Visible = true;
                             RECORD = false;
                             Application.Idle -= new EventHandler(FrameGrabber);
                         }
@@ -296,74 +296,15 @@ namespace FaceRecognition
         {
             RECORD = false;
             resultImages.Clear();
-            NEXT_BTN.Visible = false;
-            PREV_btn.Visible = false;
             Application.Idle += new EventHandler(FrameGrabber);
             Single_btn.Visible = false;
-            count_lbl.Text = "Count: 0";
-            count_lbl.Visible = true;
-        }
-        //Get 10 image to train
-        private void RECORD_BTN_Click(object sender, EventArgs e)
-        {
-            if (RECORD)
-            {
-                RECORD = false;
-            }
-            else
-            {
-                if (resultImages.Count == 10)
-                {
-                    resultImages.Clear();
-                    Application.Idle += new EventHandler(FrameGrabber);
-                }
-                RECORD = true;
-                ADD_BTN.Enabled = false;
-            }
-
-        }
-        private void NEXT_BTN_Click(object sender, EventArgs e)
-        {
-            if (results_list_pos < resultImages.Count - 1)
-            {
-                face_PICBX.Image = resultImages[results_list_pos].ToBitmap();
-                results_list_pos++;
-                PREV_btn.Enabled = true;
-            }
-            else
-            {
-                NEXT_BTN.Enabled = false;
-            }
-        }
-        private void PREV_btn_Click(object sender, EventArgs e)
-        {
-            if (results_list_pos > 0)
-            {
-                results_list_pos--;
-                face_PICBX.Image = resultImages[results_list_pos].ToBitmap();
-                NEXT_BTN.Enabled = true;
-            }
-            else
-            {
-                PREV_btn.Enabled = false;
-            }
-        }
-        private void ADD_ALL_Click(object sender, EventArgs e)
-        {
-            for (int i = 0; i < resultImages.Count; i++)
-            {
-                face_PICBX.Image = resultImages[i].ToBitmap();
-                if (!save_training_data(face_PICBX.Image)) MessageBox.Show("Error", "Error in saving file info. Training data not saved", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                Thread.Sleep(100);
-            }
-            ADD_ALL.Visible = false;
-            //restart single face detection
-            Single_btn_Click(null, null);
         }
 
         private void TrainingForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            this.Parent.Show();
+            //MainForm M = new MainForm();
+            //M.Show();
+
             this.Parent.WindowState = FormWindowState.Normal;
             this.Parent.initialise_capture();
         }

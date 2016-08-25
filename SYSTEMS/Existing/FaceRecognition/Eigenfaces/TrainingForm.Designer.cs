@@ -28,44 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ADD_ALL = new System.Windows.Forms.Button();
-            this.count_lbl = new System.Windows.Forms.Label();
             this.Single_btn = new System.Windows.Forms.Button();
             this.Delete_Data_BTN = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.RECORD_BTN = new System.Windows.Forms.Button();
             this.NAME_PERSON = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.NEXT_BTN = new System.Windows.Forms.Button();
-            this.PREV_btn = new System.Windows.Forms.Button();
             this.ADD_BTN = new System.Windows.Forms.Button();
             this.face_PICBX = new System.Windows.Forms.PictureBox();
             this.image_PICBX = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.face_PICBX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.image_PICBX)).BeginInit();
             this.SuspendLayout();
-            // 
-            // ADD_ALL
-            // 
-            this.ADD_ALL.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ADD_ALL.Location = new System.Drawing.Point(547, 255);
-            this.ADD_ALL.Name = "ADD_ALL";
-            this.ADD_ALL.Size = new System.Drawing.Size(201, 56);
-            this.ADD_ALL.TabIndex = 28;
-            this.ADD_ALL.Text = "ADD ALL...";
-            this.ADD_ALL.UseVisualStyleBackColor = true;
-            this.ADD_ALL.Visible = false;
-            this.ADD_ALL.Click += new System.EventHandler(this.ADD_ALL_Click);
-            // 
-            // count_lbl
-            // 
-            this.count_lbl.AutoSize = true;
-            this.count_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.count_lbl.Location = new System.Drawing.Point(651, 379);
-            this.count_lbl.Name = "count_lbl";
-            this.count_lbl.Size = new System.Drawing.Size(80, 24);
-            this.count_lbl.TabIndex = 27;
-            this.count_lbl.Text = "Count: 0";
             // 
             // Single_btn
             // 
@@ -94,72 +67,40 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(544, 352);
+            this.label2.Location = new System.Drawing.Point(544, 389);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(43, 13);
             this.label2.TabIndex = 24;
             this.label2.Text = "Options";
             // 
-            // RECORD_BTN
-            // 
-            this.RECORD_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RECORD_BTN.Location = new System.Drawing.Point(543, 368);
-            this.RECORD_BTN.Name = "RECORD_BTN";
-            this.RECORD_BTN.Size = new System.Drawing.Size(102, 35);
-            this.RECORD_BTN.TabIndex = 23;
-            this.RECORD_BTN.Text = "Record 10 Faces";
-            this.RECORD_BTN.UseVisualStyleBackColor = true;
-            this.RECORD_BTN.Click += new System.EventHandler(this.RECORD_BTN_Click);
-            // 
             // NAME_PERSON
             // 
-            this.NAME_PERSON.Location = new System.Drawing.Point(589, 316);
+            this.NAME_PERSON.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NAME_PERSON.Location = new System.Drawing.Point(543, 347);
             this.NAME_PERSON.Name = "NAME_PERSON";
-            this.NAME_PERSON.Size = new System.Drawing.Size(158, 20);
+            this.NAME_PERSON.Size = new System.Drawing.Size(204, 33);
             this.NAME_PERSON.TabIndex = 22;
             this.NAME_PERSON.Text = "PERSON1";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(544, 319);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.label1.Location = new System.Drawing.Point(538, 319);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 13);
+            this.label1.Size = new System.Drawing.Size(69, 25);
             this.label1.TabIndex = 21;
             this.label1.Text = "NAME:";
-            // 
-            // NEXT_BTN
-            // 
-            this.NEXT_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.NEXT_BTN.Location = new System.Drawing.Point(719, 214);
-            this.NEXT_BTN.Name = "NEXT_BTN";
-            this.NEXT_BTN.Size = new System.Drawing.Size(29, 35);
-            this.NEXT_BTN.TabIndex = 20;
-            this.NEXT_BTN.Text = ">>";
-            this.NEXT_BTN.UseVisualStyleBackColor = true;
-            this.NEXT_BTN.Visible = false;
-            this.NEXT_BTN.Click += new System.EventHandler(this.NEXT_BTN_Click);
-            // 
-            // PREV_btn
-            // 
-            this.PREV_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PREV_btn.Location = new System.Drawing.Point(547, 214);
-            this.PREV_btn.Name = "PREV_btn";
-            this.PREV_btn.Size = new System.Drawing.Size(29, 35);
-            this.PREV_btn.TabIndex = 19;
-            this.PREV_btn.Text = "<<";
-            this.PREV_btn.UseVisualStyleBackColor = true;
-            this.PREV_btn.Visible = false;
-            this.PREV_btn.Click += new System.EventHandler(this.PREV_btn_Click);
             // 
             // ADD_BTN
             // 
             this.ADD_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ADD_BTN.Location = new System.Drawing.Point(578, 214);
+            this.ADD_BTN.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ADD_BTN.Location = new System.Drawing.Point(543, 214);
             this.ADD_BTN.Name = "ADD_BTN";
-            this.ADD_BTN.Size = new System.Drawing.Size(139, 35);
+            this.ADD_BTN.Size = new System.Drawing.Size(204, 96);
             this.ADD_BTN.TabIndex = 18;
-            this.ADD_BTN.Text = "ADD Image";
+            this.ADD_BTN.Text = "ADD IMAGE";
             this.ADD_BTN.UseVisualStyleBackColor = true;
             this.ADD_BTN.Click += new System.EventHandler(this.ADD_BTN_Click);
             // 
@@ -186,16 +127,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(760, 456);
-            this.Controls.Add(this.ADD_ALL);
-            this.Controls.Add(this.count_lbl);
             this.Controls.Add(this.Single_btn);
             this.Controls.Add(this.Delete_Data_BTN);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.RECORD_BTN);
             this.Controls.Add(this.NAME_PERSON);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.NEXT_BTN);
-            this.Controls.Add(this.PREV_btn);
             this.Controls.Add(this.ADD_BTN);
             this.Controls.Add(this.face_PICBX);
             this.Controls.Add(this.image_PICBX);
@@ -213,17 +149,11 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button ADD_ALL;
-        private System.Windows.Forms.Label count_lbl;
         private System.Windows.Forms.Button Single_btn;
         private System.Windows.Forms.Button Delete_Data_BTN;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button RECORD_BTN;
         private System.Windows.Forms.TextBox NAME_PERSON;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button NEXT_BTN;
-        private System.Windows.Forms.Button PREV_btn;
         private System.Windows.Forms.Button ADD_BTN;
         private System.Windows.Forms.PictureBox face_PICBX;
         private System.Windows.Forms.PictureBox image_PICBX;
