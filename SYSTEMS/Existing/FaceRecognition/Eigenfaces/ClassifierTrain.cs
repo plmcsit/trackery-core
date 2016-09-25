@@ -29,7 +29,7 @@ namespace FaceRecognition
         int ContTrain, NumLabels;
         float Eigen_Distance = 0;
         string Eigen_label;
-        int Eigen_threshold = 1800;
+        int Eigen_threshold = 2500;
 
         //Class Variables
         string Error;

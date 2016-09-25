@@ -1,55 +1,99 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Faces_For_Training>
   <FACE>
-    <NAME>EDIL</NAME>
-    <FILE>face_EDIL_1981335611.jpg</FILE>
+    <NAME>DARYL</NAME>
+    <FILE>face_DARYL_1598296100.jpg</FILE>
+  </FACE>
+  <FACE>
+    <NAME>DARYL</NAME>
+    <FILE>face_DARYL_172376302.jpg</FILE>
+  </FACE>
+  <FACE>
+    <NAME>DARYL</NAME>
+    <FILE>face_DARYL_1266080502.jpg</FILE>
+  </FACE>
+  <FACE>
+    <NAME>JERHICA</NAME>
+    <FILE>face_JERHICA_1290497873.jpg</FILE>
+  </FACE>
+  <FACE>
+    <NAME>JERHICA</NAME>
+    <FILE>face_JERHICA_1944109463.jpg</FILE>
+  </FACE>
+  <FACE>
+    <NAME>JERHICA</NAME>
+    <FILE>face_JERHICA_211262190.jpg</FILE>
+  </FACE>
+  <FACE>
+    <NAME>WICS</NAME>
+    <FILE>face_WICS_1074782625.jpg</FILE>
+  </FACE>
+  <FACE>
+    <NAME>WICS</NAME>
+    <FILE>face_WICS_283318124.jpg</FILE>
+  </FACE>
+  <FACE>
+    <NAME>WICS</NAME>
+    <FILE>face_WICS_1871221553.jpg</FILE>
+  </FACE>
+  <FACE>
+    <NAME>RONEL</NAME>
+    <FILE>face_RONEL_211300966.jpg</FILE>
+  </FACE>
+  <FACE>
+    <NAME>RONEL</NAME>
+    <FILE>face_RONEL_1888261340.jpg</FILE>
+  </FACE>
+  <FACE>
+    <NAME>RONEL</NAME>
+    <FILE>face_RONEL_1979553329.jpg</FILE>
+  </FACE>
+  <FACE>
+    <NAME>PAULO</NAME>
+    <FILE>face_PAULO_1471963224.jpg</FILE>
+  </FACE>
+  <FACE>
+    <NAME>PAULO</NAME>
+    <FILE>face_PAULO_1457949471.jpg</FILE>
+  </FACE>
+  <FACE>
+    <NAME>PAULO</NAME>
+    <FILE>face_PAULO_373739361.jpg</FILE>
+  </FACE>
+  <FACE>
+    <NAME>MICHAEL</NAME>
+    <FILE>face_MICHAEL_1629427192.jpg</FILE>
+  </FACE>
+  <FACE>
+    <NAME>MICHAEL</NAME>
+    <FILE>face_MICHAEL_1151644873.jpg</FILE>
+  </FACE>
+  <FACE>
+    <NAME>MICHAEL</NAME>
+    <FILE>face_MICHAEL_1945680644.jpg</FILE>
   </FACE>
   <FACE>
     <NAME>EDIL</NAME>
-    <FILE>face_EDIL_89244090.jpg</FILE>
+    <FILE>face_EDIL_1921237255.jpg</FILE>
   </FACE>
   <FACE>
     <NAME>EDIL</NAME>
-    <FILE>face_EDIL_1602104327.jpg</FILE>
+    <FILE>face_EDIL_1375670790.jpg</FILE>
   </FACE>
   <FACE>
     <NAME>EDIL</NAME>
-    <FILE>face_EDIL_571832723.jpg</FILE>
-  </FACE>
-  <FACE>
-    <NAME>EDIL</NAME>
-    <FILE>face_EDIL_1590661844.jpg</FILE>
-  </FACE>
-  <FACE>
-    <NAME>EDIL</NAME>
-    <FILE>face_EDIL_1838963037.jpg</FILE>
+    <FILE>face_EDIL_778568976.jpg</FILE>
   </FACE>
   <FACE>
     <NAME>VINCE</NAME>
-    <FILE>face_VINCE_469384902.jpg</FILE>
+    <FILE>face_VINCE_1090302765.jpg</FILE>
   </FACE>
   <FACE>
     <NAME>VINCE</NAME>
-    <FILE>face_VINCE_2019766735.jpg</FILE>
+    <FILE>face_VINCE_275498534.jpg</FILE>
   </FACE>
   <FACE>
     <NAME>VINCE</NAME>
-    <FILE>face_VINCE_301101328.jpg</FILE>
-  </FACE>
-  <FACE>
-    <NAME>VINCE</NAME>
-    <FILE>face_VINCE_191107810.jpg</FILE>
-  </FACE>
-  <FACE>
-    <NAME>VINCE</NAME>
-    <FILE>face_VINCE_1209936931.jpg</FILE>
-  </FACE>
-  <FACE>
-    <NAME>VINCE</NAME>
-    <FILE>face_VINCE_83685562.jpg</FILE>
-  </FACE>
-  <FACE>
-    <NAME>VINCE</NAME>
-    <FILE>face_VINCE_1378843382.jpg</FILE>
+    <FILE>face_VINCE_687731751.jpg</FILE>
   </FACE>
 </Faces_For_Training>

@@ -73,7 +73,7 @@
             this.Eigne_threshold_txtbx.Name = "Eigne_threshold_txtbx";
             this.Eigne_threshold_txtbx.Size = new System.Drawing.Size(75, 20);
             this.Eigne_threshold_txtbx.TabIndex = 1;
-            this.Eigne_threshold_txtbx.Text = "1800";
+            this.Eigne_threshold_txtbx.Text = "2000";
             this.Eigne_threshold_txtbx.TextChanged += new System.EventHandler(this.Eigne_threshold_txtbxChanged);
             // 
             // tableLayoutPanel1
