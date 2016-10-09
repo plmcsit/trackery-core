@@ -126,21 +126,18 @@ namespace FaceRecognition
 
                 //Face Detector
                 Rectangle[] facesDetected = Face.DetectMultiScale(gray_frame, 1.2, 10, new Size(50, 50), Size.Empty);
-
+                Rectangle face = facesDetected[0];
                 //Action for each element detected
-                for (int i = 0; i < facesDetected.Length; i++)// (Rectangle face_found in facesDetected)
-                {
-                    //This will focus in on the face from the haar results its not perfect but it will remove a majoriy
-                    //of the background noise
-                    facesDetected[i].X += (int)(facesDetected[i].Height * 0.15);
-                    facesDetected[i].Y += (int)(facesDetected[i].Width * 0.22);
-                    facesDetected[i].Height -= (int)(facesDetected[i].Height * 0.3);
-                    facesDetected[i].Width -= (int)(facesDetected[i].Width * 0.35);
+                
+                    face.X += (int)(face.Height * 0.15);
+                    face.Y += (int)(face.Width * 0.22);
+                    face.Height -= (int)(face.Height * 0.3);
+                    face.Width -= (int)(face.Width * 0.35);
 
-                    result = currentFrame.Copy(facesDetected[i]).Convert<Gray, byte>().Resize(130, 130, Emgu.CV.CvEnum.Inter.Cubic);
+                    result = currentFrame.Copy(face).Convert<Gray, byte>().Resize(130, 130, Emgu.CV.CvEnum.Inter.Cubic);
                     result._EqualizeHist();
                     //draw the face detected in the 0th (gray) channel with blue color
-                    currentFrame.Draw(facesDetected[i], new Bgr(Color.Blue), 2);
+                    currentFrame.Draw(face, new Bgr(Color.Blue), 2);
 
                     if (Eigen_Recog.IsTrained)
                     {
@@ -151,12 +148,12 @@ namespace FaceRecognition
 
                         CvInvoke.PutText(currentFrame,
                         name + " ",
-                        new System.Drawing.Point(facesDetected[i].X - 2, facesDetected[i].Y - 2),
+                        new System.Drawing.Point(face.X - 2, face.Y - 2),
                         FontFace.HersheyComplex, 0.5,
                         new Bgr(Color.LightGreen).MCvScalar);
                         ADD_Face_Found(result, name, match_value);
                     }
-                }
+                
                 //Show the faces procesed and recognized
                 image_PICBX.Image = currentFrame.ToBitmap();
             }
@@ -175,21 +172,24 @@ namespace FaceRecognition
                 gray_frame = currentFrame.Convert<Gray, Byte>();
                 //Face Detector
                 Rectangle[] facesDetected = Face.DetectMultiScale(gray_frame, 1.2, 10, new Size(50, 50), Size.Empty);
+
                 //   CircleF eyeDetected = eye
                 //Action for each element detected
-                Parallel.For(0, facesDetected.Length, i =>
-                {
+               
                     try
                     {
-                        facesDetected[i].X += (int)(facesDetected[i].Height * 0.15);
-                        facesDetected[i].Y += (int)(facesDetected[i].Width * 0.22);
-                        facesDetected[i].Height -= (int)(facesDetected[i].Height * 0.3);
-                        facesDetected[i].Width -= (int)(facesDetected[i].Width * 0.35);
+                    Rectangle face = new Rectangle();
+                    face = facesDetected[0];
 
-                        result = currentFrame.Copy(facesDetected[i]).Convert<Gray, byte>().Resize(100, 100, Emgu.CV.CvEnum.Inter.Cubic);
+                        face.X += (int)(face.Height * 0.15);
+                        face.Y += (int)(face.Width * 0.22);
+                        face.Height -= (int)(face.Height * 0.3);
+                        face.Width -= (int)(face.Width * 0.35);
+
+                        result = currentFrame.Copy(face).Convert<Gray, byte>().Resize(100, 100, Emgu.CV.CvEnum.Inter.Cubic);
                         result._EqualizeHist();
                         //draw the face detected in the 0th (gray) channel with blue color
-                        currentFrame.Draw(facesDetected[i], new Bgr(Color.Red), 2);
+                        currentFrame.Draw(face, new Bgr(Color.Red), 2);
 
                         if (Eigen_Recog.IsTrained)
                         {
@@ -199,7 +199,7 @@ namespace FaceRecognition
                             //Draw the label for each face detected and recognized
                             CvInvoke.PutText(currentFrame,
                             name + " ",
-                            new System.Drawing.Point(facesDetected[i].X - 2, facesDetected[i].Y - 2),
+                            new System.Drawing.Point(face.X - 2, face.Y - 2),
                             FontFace.HersheyComplex, 0.5,
                             new Bgr(Color.LightGreen).MCvScalar);
                             //  ADD_Face_Found(result, name, match_value);
@@ -213,7 +213,7 @@ namespace FaceRecognition
                         //No action as the error is useless, it is simply an error in 
                         //no data being there to process and this occurss sporadically 
                     }
-                });
+                
                 //Show the faces procesed and recognized
                 image_PICBX.Image = currentFrame.ToBitmap();
             }

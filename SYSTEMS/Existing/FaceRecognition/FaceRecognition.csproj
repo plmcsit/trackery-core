@@ -35,6 +35,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>FaceRecognition.Program</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Emgu.CV.UI, Version=3.1.0.2282, Culture=neutral, PublicKeyToken=7281126722ab4438, processorArchitecture=MSIL">
       <HintPath>..\packages\EmguCV.3.1.0.1\lib\net30\Emgu.CV.UI.dll</HintPath>
@@ -73,22 +76,22 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClassifierTrain.cs" />
-    <Compile Include="MainForm.cs">
+    <Compile Include="Eigenfaces\ClassifierTrain.cs" />
+    <Compile Include="Eigenfaces\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForm.Designer.cs">
+    <Compile Include="Eigenfaces\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TrainingForm.cs">
+    <Compile Include="Eigenfaces\TrainingForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TrainingForm.Designer.cs">
+    <Compile Include="Eigenfaces\TrainingForm.Designer.cs">
       <DependentUpon>TrainingForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="MainForm.resx">
+    <EmbeddedResource Include="Eigenfaces\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -101,7 +104,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="TrainingForm.resx">
+    <EmbeddedResource Include="Eigenfaces\TrainingForm.resx">
       <DependentUpon>TrainingForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="OpenTK.dll.config" />
