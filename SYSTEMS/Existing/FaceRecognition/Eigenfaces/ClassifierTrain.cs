@@ -29,7 +29,7 @@ namespace FaceRecognition
         int ContTrain, NumLabels;
         float Eigen_Distance = 0;
         string Eigen_label;
-        int Eigen_threshold = 2500;
+        int Eigen_threshold = 1600;
 
         //Class Variables
         string Error;
@@ -106,7 +106,8 @@ namespace FaceRecognition
                 {
                     Eigen_label = Names_List[ER.Label];
                     Eigen_Distance = (float)ER.Distance;
-                    if (Eigen_Thresh > -1) Eigen_threshold = Eigen_Thresh;
+                    if (Eigen_Thresh > -1)
+                        Eigen_threshold = Eigen_Thresh;
 
                     //Only use the post threshold rule if we are using an Eigen Recognizer 
                     //since Fisher and LBHP threshold set during the constructor will work correctly 
