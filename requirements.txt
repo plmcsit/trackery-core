@@ -7,14 +7,14 @@ dnspython==1.14.0
 image==1.5.5
 matplotlib==1.5.2
 ndg-httpsclient==0.4.2
-numpy==1.11.1rc1
+numpy==1.9.2
 Pillow==3.4.2
 pyasn1==0.1.9
 pycrypto==2.6.1
 PyMySQL==0.7.9
 pyOpenSSL==16.1.0
 python-dateutil==2.4.2
-scipy==0.17.1
+scipy==0.15.1
 six==1.10.0
 stevedore==1.17.1
 urllib3==1.15.1
