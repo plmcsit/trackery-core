@@ -1,0 +1,1214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="08a0c116-64bb-473d-9acb-a96390620615" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/finding/scripts/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/found/scripts/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/home/scripts/__init__.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/.idea/Proposed.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/.idea/misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/.idea/workspace.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/.vscode/settings.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/EigenFace.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/data/mean.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/data/model.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/data/test.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/data/train.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/faces/don.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/faces/edil.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/faces/paulo.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/faces/test/1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/faces/test/10.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/faces/test/11.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/faces/test/12.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/faces/test/13.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/faces/test/14.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/faces/test/16.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/faces/test/17.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/faces/test/2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/faces/test/3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/faces/test/4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/faces/test/5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/faces/test/6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/faces/test/7.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/faces/test/8.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/faces/test/9.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/faces/timbs.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/test/1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/test/2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/test/subject06.centerlight.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/test/subject06.glasses.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/test/subject06.happy.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/test/subject06.leftlight.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/test/subject06.noglasses.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/test/subject06.normal.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/test/subject06.rightlight.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/test/subject06.sad.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/test/subject06.sleepy.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/test/subject06.surprised.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/test/subject06.wink.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/test/subject14.centerlight.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/test/subject14.glasses.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/test/subject14.happy.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/test/subject14.leftlight.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/test/subject14.noglasses.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/test/subject14.normal.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/test/subject14.rightlight.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/test/subject14.sad.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/test/subject14.sleepy.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/test/subject14.surprised.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/test/subject14.wink.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject01.centerlight.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject01.glasses.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject01.happy.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject01.leftlight.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject01.noglasses.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject01.normal.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject01.rightlight.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject01.sad.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject01.sleepy.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject01.surprised.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject01.wink.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject02.centerlight.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject02.glasses.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject02.happy.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject02.leftlight.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject02.noglasses.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject02.normal.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject02.rightlight.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject02.sad.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject02.sleepy.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject02.surprised.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject02.wink.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject03.centerlight.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject03.glasses.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject03.happy.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject03.leftlight.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject03.noglasses.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject03.normal.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject03.rightlight.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject03.sad.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject03.sleepy.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject03.surprised.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject03.wink.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject04.centerlight.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject04.glasses.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject04.happy.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject04.leftlight.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject04.noglasses.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject04.normal.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject04.rightlight.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject04.sad.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject04.sleepy.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject04.surprised.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject04.wink.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject05.centerlight.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject05.glasses.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject05.happy.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject05.leftlight.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject05.noglasses.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject05.normal.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject05.rightlight.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject05.sad.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject05.sleepy.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject05.surprised.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject05.wink.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject06.centerlight.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject06.glasses.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject06.happy.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject06.leftlight.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject06.noglasses.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject06.normal.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject06.rightlight.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject06.sad.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject06.sleepy.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject06.surprised.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject06.wink.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject07.centerlight.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject07.glasses.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject07.happy.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject07.leftlight.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject07.noglasses.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject07.normal.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject07.rightlight.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject07.sad.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject07.sleepy.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject07.surprised.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject07.wink.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject08.centerlight.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject08.glasses.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject08.happy.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject08.leftlight.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject08.noglasses.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject08.normal.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject08.rightlight.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject08.sad.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject08.sleepy.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject08.surprised.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject08.wink.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject09.centerlight.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject09.glasses.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject09.happy.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject09.leftlight.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject09.noglasses.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject09.normal.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject09.rightlight.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject09.sad.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject09.sleepy.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject09.surprised.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject09.wink.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject10.centerlight.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject10.glasses.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject10.happy.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject10.leftlight.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject10.noglasses.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject10.normal.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject10.rightlight.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject10.sad.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject10.sleepy.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject10.surprised.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject10.wink.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject11.centerlight.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject11.glasses.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject11.happy.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject11.leftlight.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject11.noglasses.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject11.normal.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject11.rightlight.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject11.sad.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject11.sleepy.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject11.surprised.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject11.wink.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject12.centerlight.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject12.glasses.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject12.happy.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject12.leftlight.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject12.noglasses.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject12.normal.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject12.rightlight.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject12.sad.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject12.sleepy.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject12.surprised.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject12.wink.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject13.centerlight.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject13.glasses.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject13.happy.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject13.leftlight.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject13.noglasses.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject13.normal.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject13.rightlight.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject13.sad.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject13.sleepy.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject13.surprised.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject13.wink.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject14.centerlight.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject14.glasses.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject14.happy.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject14.leftlight.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject14.noglasses.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject14.normal.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject14.rightlight.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject14.sad.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject14.sleepy.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject14.surprised.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject14.wink.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject15.centerlight.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject15.glasses.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject15.happy.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject15.leftlight.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject15.noglasses.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject15.normal.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject15.rightlight.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject15.sad.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject15.sleepy.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject15.surprised.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/images/train/subject15.wink.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/init.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/path.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/recognize.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/teach.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/templates/Edil.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/templates/Ronel.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/templates/Timbs.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/templates/bak/Aravind.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/templates/bak/Don_Ronel.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/templates/bak/Edil.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/templates/bak/Pogi.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/templates/bak/Timbs.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/templates/bak/abishek.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/templates/bak/jeevan.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/templates/bak/subject06.npy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/test/recognize/1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/test/recognize/2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/test/recognize/3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/test/recognize/4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/test/teach/1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/test/teach/2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/test/teach/3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/test/teach/4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/xmls/haarcascade_frontalface_default.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/eigen-core/xmls/haarcascade_frontalface_default.xml.bak" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trackerys/.idea/jsLibraryMappings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trackerys/.idea/misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trackerys/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trackerys/.idea/trackery.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/trackerys/.idea/workspace.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/finding/admin.py" afterPath="$PROJECT_DIR$/finding/admin.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/finding/models.py" afterPath="$PROJECT_DIR$/finding/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/finding/urls.py" afterPath="$PROJECT_DIR$/finding/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/finding/views.py" afterPath="$PROJECT_DIR$/finding/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/home/views.py" afterPath="$PROJECT_DIR$/home/views.py" />
+    </list>
+    <ignored path="trackery-core.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/trackery-core$EigenFace.coverage" NAME="EigenFace Coverage Results" MODIFIED="1481885975926" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/finding/scripts" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="trackery-core" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/finding/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#36#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="admin.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/finding/admin.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="108">
+              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/finding/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="108">
+              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/finding/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="recognize.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/finding/scripts/recognize.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="508">
+              <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#23#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/finding/recognize.py" />
+        <option value="$PROJECT_DIR$/found/views.py" />
+        <option value="$PROJECT_DIR$/finding/EigenFace.py" />
+        <option value="$PROJECT_DIR$/trackery/settings.py" />
+        <option value="$PROJECT_DIR$/finding/templates/finding/index.html" />
+        <option value="$PROJECT_DIR$/finding/scripts/init.py" />
+        <option value="$PROJECT_DIR$/finding/scripts/EigenFace.py" />
+        <option value="$PROJECT_DIR$/home/scripts/init.py" />
+        <option value="$PROJECT_DIR$/finding/scripts/path.py" />
+        <option value="$PROJECT_DIR$/home/views.py" />
+        <option value="$PROJECT_DIR$/finding/scripts/recognize.py" />
+        <option value="$PROJECT_DIR$/finding/templates/finding/upload.html" />
+        <option value="$PROJECT_DIR$/finding/templates/finding/list.html" />
+        <option value="$PROJECT_DIR$/finding/templates/finding/upload_image.html" />
+        <option value="$PROJECT_DIR$/finding/forms.py" />
+        <option value="$PROJECT_DIR$/finding/views.py" />
+        <option value="$PROJECT_DIR$/finding/urls.py" />
+        <option value="$PROJECT_DIR$/finding/admin.py" />
+        <option value="$PROJECT_DIR$/finding/models.py" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="59" />
+    <option name="y" value="24" />
+    <option name="width" value="1307" />
+    <option name="height" value="744" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="2" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trackery-core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trackery-core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trackery-core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trackery-core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trackery-core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trainfaces" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trackery-core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trackery-core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trainfaces" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="find" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.django.DjangoModulesConfigurable" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/finding/templates/finding" />
+      <recent name="$PROJECT_DIR$/finding/templates" />
+      <recent name="$PROJECT_DIR$/finding/script" />
+      <recent name="$PROJECT_DIR$/finding/scripts" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/finding/templates" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Django server.trackery-core">
+    <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="trackery-core" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="TARGET" value="" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="PyBehaveRunConfigurationType" factoryName="Behave">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="trackery-core" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="ADDITIONAL_ARGS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="PyLettuceRunConfigurationType" factoryName="Lettuce">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="trackery-core" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="ADDITIONAL_ARGS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Python.DjangoServer" factoryName="Django server">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="trackery-core" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="trackery-core" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Tox" factoryName="Tox">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <module name="trackery-core" />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run-script" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Attests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="trackery-core" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="trackery-core" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Nosetests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="trackery-core" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="trackery-core" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="py.test">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="trackery-core" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="testToRun" value="" />
+      <option name="keywords" value="" />
+      <option name="params" value="" />
+      <option name="USE_PARAM" value="false" />
+      <option name="USE_KEYWORD" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="trackery-core" type="Python.DjangoServer" factoryName="Django server">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="trackery.settings" />
+      </envs>
+      <option name="SDK_HOME" value="/usr/bin/python2.7" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="trackery-core" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="http://127.0.0.1:8000/" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method />
+    </configuration>
+    <configuration default="false" name="EigenFace" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/finding/scripts" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="trackery-core" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/finding/scripts/EigenFace.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <list size="2">
+      <item index="0" class="java.lang.String" itemvalue="Django server.trackery-core" />
+      <item index="1" class="java.lang.String" itemvalue="Python.EigenFace" />
+    </list>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="08a0c116-64bb-473d-9acb-a96390620615" name="Default" comment="" />
+      <created>1480905064012</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1480905064012</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="59" y="24" width="1307" height="744" extended-state="6" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2854877" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24980174" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972136" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32972136" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972136" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972136" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3993808" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="4" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/finding/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/finding/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/finding/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/finding/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/finding/scripts/recognize.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="684">
+          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/finding/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/home/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/home/scripts/init.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/finding/scripts/EigenFace.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1260">
+          <caret line="72" column="7" selection-start-line="72" selection-start-column="7" selection-end-line="72" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/finding/scripts/path.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="35" column="20" selection-start-line="35" selection-start-column="20" selection-end-line="35" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/finding/scripts/recognize.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/finding/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/home/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/home/scripts/init.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/finding/scripts/EigenFace.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1260">
+          <caret line="72" column="7" selection-start-line="72" selection-start-column="7" selection-end-line="72" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/finding/scripts/path.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="35" column="20" selection-start-line="35" selection-start-column="20" selection-end-line="35" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/finding/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/finding/templates/finding/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trackery/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2592">
+          <caret line="144" column="0" selection-start-line="144" selection-start-column="0" selection-end-line="144" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/finding/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/finding/templates/finding/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="22" column="70" selection-start-line="22" selection-start-column="70" selection-end-line="22" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trackery/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2592">
+          <caret line="144" column="0" selection-start-line="144" selection-start-column="0" selection-end-line="144" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/finding/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/finding/templates/finding/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="22" column="70" selection-start-line="22" selection-start-column="70" selection-end-line="22" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trackery/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2592">
+          <caret line="144" column="0" selection-start-line="144" selection-start-column="0" selection-end-line="144" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/finding/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/finding/templates/finding/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="22" column="70" selection-start-line="22" selection-start-column="70" selection-end-line="22" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trackery/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2592">
+          <caret line="144" column="0" selection-start-line="144" selection-start-column="0" selection-end-line="144" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/finding/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/finding/templates/finding/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/home/templates/home/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-810">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/found/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="7" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trackery/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/files/images/faces/don.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/finding/scripts/LICENSE" />
+    <entry file="file://$PROJECT_DIR$/finding/scripts/teach.py" />
+    <entry file="file://$PROJECT_DIR$/finding/scripts/init.py" />
+    <entry file="file://$PROJECT_DIR$/home/scripts/init.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/finding/scripts/EigenFace.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="580">
+          <caret line="72" column="7" selection-start-line="72" selection-start-column="7" selection-end-line="72" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/finding/scripts/path.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="580">
+          <caret line="35" column="20" selection-start-line="35" selection-start-column="20" selection-end-line="35" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/home/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/finding/templates/finding/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="440" column="0" selection-start-line="440" selection-start-column="0" selection-end-line="440" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/finding/templates/finding/upload.html" />
+    <entry file="file://$PROJECT_DIR$/finding/templates/finding/upload_image.html" />
+    <entry file="file://$PROJECT_DIR$/finding/forms.py" />
+    <entry file="file://$PROJECT_DIR$/finding/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/finding/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/found/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/finding/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/finding/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/finding/scripts/recognize.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="508">
+          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
