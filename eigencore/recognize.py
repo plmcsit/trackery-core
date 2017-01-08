@@ -8,7 +8,7 @@ from path import recognize_path
 
 dataDir = recognize_path("data")
 tmplDir = recognize_path("templates")
-
+outs = ""
 
 mean, eiVecs = loadModel(dataDir)
 tmplData = loadTemplates(tmplDir)
@@ -25,7 +25,8 @@ def predict(img):
 def startrecognize():
     curDir = os.getcwd() + os.sep
     mode = recognize_path("mode")
-    imgDir = recognize_path("image")
+    #imgDir = recognize_path("image")
+    imgDir = sys.argv[1]
 
     img = None
     cascade = recognize_path("face")
@@ -40,6 +41,10 @@ def startrecognize():
            font = cv2.FONT_HERSHEY_SIMPLEX
            cv2.putText(img, labelPred + ', ' + str(loss), (x+w/2,y-10), font, 0.6, (255, 255, 255), 1)
            cv2.rectangle(img, (x,y), (x+w,y+h),(255,0,0),2)
-        cv2.imshow("Img", img)
-        cv2.waitKey(0)
+        #cv2.imshow("Img", img)
+        #cv2.waitKey(0)
+        #glob.outs = labelPred
+        return labelPred
 
+outs = startrecognize()
+print outs

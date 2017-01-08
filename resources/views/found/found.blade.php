@@ -4,8 +4,21 @@
 Trackery - FOUND
 @endsection
 
+@section('page-image')
+    <img class="img-responsive" src="img/png/compass.png" alt="trakery" style="width:20%;height:20%;">
+@endsection
+
 @section('intro')
-    FOUND MODULE
+    @if(!empty($uploaded))
+        IMAGE UPLOADED!
+    @else
+        FOUND MODULE
+    @endif
+    
+@endsection
+
+@section('message')
+    
 @endsection
 
 @section('navbar')
@@ -31,7 +44,59 @@ Trackery - FOUND
                 </div>
             </div>
             <div class="row">
-            
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <form action="found" method="post" enctype="multipart/form-data">
+                           {{-- <input type="hidden" name="_token" value="{{ csrf_token() }}"> --}}
+                            {{ csrf_field() }}
+                            <h3>STEP 1: UPLOAD IMAGE</h3>
+                                <div class="row control-group">
+                                    <div class="form-group col-xs-12 floating-label-form-group controls">
+                                    <label>IMAGE</label>
+                                    {{-- <input type="hidden" name="MAX_FILE_SIZE" value="30000" /> --}}
+                                    <input name="image" type="file" required data-validation-required-message="Please upload an image.">
+                                    <p class="help-block text-danger"></p>
+                                    @if(!empty($valid))
+                                        <p class="text-danger">Previous file was invalid. Please enter a valid image file.</p>
+                                    @endif
+                                    </div>
+                                </div>
+                            
+                            <h3>STEP 2: ENTER INFORMATION</h3>
+                            <div class="row control-group">
+                                <div class="form-group col-xs-12 floating-label-form-group controls">
+                                    <label>NAME</label>
+                                    <input name="name" type="text" class="form-control" placeholder="Name (if available)" id="name">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+
+                            <div class="row control-group">
+                                <div class="form-group col-xs-12 floating-label-form-group controls">
+                                    <label>LOCATION</label>
+                                    <input name="location" type="text" class="form-control" placeholder="Location" id="location" required data-validation-required-message="Please enter the location where you found them.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+
+                            <div class="row control-group">
+                                <div class="form-group col-xs-12 floating-label-form-group controls">
+                                    <label>MESSAGE</label>
+                                    <textarea name="message" rows="2" class="form-control" placeholder="Message (optional)" id="message"></textarea>
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <br>
+        
+                            <div id="success"></div>
+                            <div class="row">
+                                <div class="form-group col-xs-12">
+                                    <button type="submit" class="btn btn-success btn-lg">Send</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -48,22 +113,22 @@ Trackery - FOUND
             <div class="row">
                 <div class="col-lg-4 col-lg-offset-2 col-xs-12">
                     <center><a href="/home" class="btn btn-lg btn-outline">
-                        <i class="fa fa-photo"></i> Home Page
+                        <i class="fa fa-home"></i> Home Page
                     </a></center>
                 </div>
                 <div class="col-lg-4 col-xs-12">
                     <center><a href="/find" class="btn btn-lg btn-outline">
-                        <i class="fa fa-photo"></i> &nbsp;Find Page&nbsp;
+                        <i class="fa fa-binoculars"></i> &nbsp;Find Page&nbsp;
                     </a></center>
                 </div>
                 <div class="col-lg-4 col-lg-offset-2 col-xs-12">
                     <center><a href="https://www.github.com/PLMCSIT/trackery-core" class="btn btn-lg btn-outline">
-                        <i class="fa fa-photo"></i> Github Page
+                        <i class="fa fa-github-alt"></i> Github Page
                     </a></center>
                 </div>
                 <div class="col-lg-4 col-xs-12">
                     <center><a href="/home/#contact" class="btn btn-lg btn-outline">
-                        <i class="fa fa-photo"></i> Contact Us
+                        <i class="fa fa-envelope"></i> Contact Us
                     </a></center>
                 </div>
             </div>

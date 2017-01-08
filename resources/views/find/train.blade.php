@@ -21,7 +21,11 @@
         <a href="#"></a>
     </li>
     <li class="page-scroll">
-        <a href="#find">Start Finding</a>
+        @if(!empty($result))
+            <a href="#find">Information</a>
+        @else
+            <a href="#find">Start Finding</a>
+        @endif
     </li>
     <li class="page-scroll">
         <a href="#directories">Directories</a>
@@ -34,35 +38,30 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2>START FINDING</h2>
+                    @if(!empty($result))
+                        <h2>INFORMATION</h2>
+                    @else
+                        <h2>START FINDING</h2>
+                    @endif
                     <hr class="star-primary">
                 </div>
             </div>
             <div class="row">
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
-                        <form action="find" method="post" enctype="multipart/form-data">
-                            {{ csrf_field() }}
-                            <h3>STEP 1: UPLOAD IMAGE</h3>
-                                <div class="row control-group">
-                                    <div class="form-group col-xs-12 floating-label-form-group controls">
-                                    <label>IMAGE</label>
-                                    {{-- <input type="hidden" name="MAX_FILE_SIZE" value="30000" /> --}}
-                                    <input name="image" type="file" required data-validation-required-message="Please upload an image.">
-                                    <p class="help-block text-danger"></p>
-                                    @if(!empty($valid))
-                                        <p class="text-danger">Previous file was invalid. Please enter a valid image file.</p>
-                                    @endif
-                                    </div>
-                                </div>
-                            <br>
-                            <div id="success"></div>
-                            <div class="row">
-                                <div class="form-group col-xs-12">
-                                    <button type="submit" class="btn btn-success btn-lg">Send</button>
-                                </div>
-                            </div>
-                        </form>
+                        @if(!empty($result))
+                           <h3 style="color: #18bc9c">Name:</h3><h2>{{$result[0]->name}}</h2>
+                           <h3 style="color: #18bc9c">Last Seen at:</h3><h2>{{$result[0]->location}}</h2>
+                           <h3 style="color: #18bc9c">Time and Date:</h3><h2>{{$result[0]->created_at}}</h2>
+                           <h3 style="color: #18bc9c">Other Info:</h3><h2>{{$result[0]->message}}</h2>
+                        <br>
+                        <center><a href="/find" class="btn btn-success btn-lg">
+                            <i class="fa fa-photo"></i> Try Again.
+                        </a></center>
+                        @else
+                            <h1>NO IMAGE TO FIND!</h1>
+                            <h3>Upload an image first on found module.</h3>
+                        @endif
                     </div>
                 </div>
             </div>

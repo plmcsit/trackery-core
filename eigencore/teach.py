@@ -7,9 +7,13 @@ from path import train_path
 
 dataDir = train_path("data")
 tmplDir = train_path("templates")
-label = train_path("label")
+label = sys.argv[1]
+imgDir = sys.argv[2]
 mode = train_path("mode")
-imgDir = train_path("image")
+
+# label = train_path("label")
+# imgDir = train_path("image")
+
 
 mean, eiVecs = loadModel(dataDir)
 img = None

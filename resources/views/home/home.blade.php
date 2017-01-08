@@ -4,6 +4,10 @@
     Trackery - HOME
 @endsection
 
+@section('page-image')
+    <img class="img-responsive" src="img/png/profile.png" alt="trakery">
+@endsection
+
 @section('intro')
     <small>HI I'M</small><br>TRACKERY
 @endsection

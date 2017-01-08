@@ -7,13 +7,13 @@ def train_path(s):
     if s == "mode":
         ret = "image"
     elif s == "data":
-        ret = curDir + "data"
+        ret = "/home/aethelbert/Programming/Trackery/trackery-core/eigencore/data"
     elif s == "templates":
-        ret = curDir + "templates"
+        ret = "/home/aethelbert/Programming/Trackery/trackery-core/eigencore/templates"
     elif s == "label":
         ret = "Timbs"
     elif s == "image":
-        ret = curDir + "test/teach/4.jpg"
+        ret = "/home/aethelbert/Programming/Trackery/trackery-core/eigencore/test/teach/4.jpg"
     return ret
 
 
@@ -21,12 +21,12 @@ def recognize_path(s):
     if s == "mode":
         ret = "image"
     elif s == "data":
-        ret = curDir + "data"
+        ret = "/home/aethelbert/Programming/Trackery/trackery-core/eigencore/data"
     elif s == "templates":
-        ret = curDir + "templates"
+        ret = "/home/aethelbert/Programming/Trackery/trackery-core/eigencore/templates"
     elif s == "image":
-        ret = curDir + "test/recognize/4.jpg"
+        ret =  "/home/aethelbert/Programming/Trackery/trackery-core/eigencore/test/recognize/4.jpg"
     elif s == "face":
-        ret = curDir + "xmls/haarcascade_frontalface_default.xml"
+        ret = "/home/aethelbert/Programming/Trackery/trackery-core/eigencore/xmls/haarcascade_frontalface_default.xml"
     return ret
 

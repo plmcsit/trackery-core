@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>@yield('title')</title>
 
     <!-- Bootstrap Core CSS -->
@@ -66,9 +66,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <img class="img-responsive" src="img/png/profile.png" alt="trakery">
+                    @yield('page-image')
                     <div class="intro-text">
                         <span class="name">@yield('intro')</span>
+                        @yield('message')
                         <hr class="star-light">
                             <span class="skills">FINDING SOMEONE - FOUND SOMEONE - HELP SOMEONE</span>
                     </div>
@@ -177,7 +178,6 @@
                         <h3>Developers</h3>
                         <p>Programmer: <a href="http://facebook.com/edilsalvador">Edilberto D. Salvador Jr.</a>
                         <br>Researcher: <a href="http://facebook.com/shinzangetsu">Vince Kyle D. Timbol.</a></p>
-                        <br>I love my honey so much! :* :* :*
                     </div>
                 </div>
             </div>

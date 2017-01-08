@@ -15,3 +15,6 @@ Route::get('/', 'HomeController@index');
 Route::get('home/', 'HomeController@index');
 Route::get('found/', 'FoundController@index');
 Route::get('find/', 'FindController@index');
+
+Route::post('found/','FoundController@upload');
+Route::post('find/','FindController@upload');
