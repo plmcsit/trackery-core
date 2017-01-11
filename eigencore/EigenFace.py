@@ -49,7 +49,6 @@ def test(testList, eiVecs):
 
     output = [computeCoeff(img, eiVecs) for img in testset]
     # data = load("templates")
-
     # TODO : Compute loss and give a match
     return output
 

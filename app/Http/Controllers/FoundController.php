@@ -31,7 +31,8 @@ class FoundController extends Controller
             return view('found.found')->with('valid', 'false');
         }
         else{
-            $storage = base_path('eigencore/test/teach');
+            # $storage = base_path('eigencore/test/teach');
+            $storage = base_path('public/img/faces/teach');
             $image_name = $this->GUIDRANDOM();
             $file_name = $image_name.".".$file->getClientOriginalExtension();
             $file->move($storage,$file_name);

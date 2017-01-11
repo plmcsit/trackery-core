@@ -34,18 +34,30 @@ class FindController extends Controller
             return view('find.find')->with('valid', 'false');
         }
         else{
-            $storage = base_path('eigencore/test/recognize');
+            # $storage = base_path('eigencore/test/recognize');
+            $storage = base_path('public/img/faces/recognize');
             $file_name = $this->GUIDRANDOM();
             $file_name = $file_name.".".$file->getClientOriginalExtension();
             $file->move($storage,$file_name);
 
-            $recog = base_path('eigencore/recognize.py');
-            $exec_query = '/usr/bin/python '.$recog.' '.$storage.'/'.$file_name;
+            $python_script = base_path('eigencore/recognize.py');
+            $image_to_recog = $storage.'/'.$file_name;
+            $exec_query = '/usr/bin/python '.$python_script.' '.$image_to_recog;
             exec($exec_query , $output);
             $path_like = $output[0].'%';
             $result = DB::table('TrainInfo')->where('file', 'like', $path_like)->take(1)->get();
             #var_dump($result);
-            return view('find.train')->with('uploaded', 'true')->with('result', $result);
+            
+            # static path for display
+            $storage_path_1 = 'img/faces/recognize/';
+            $storage_path_2 = 'img/faces/train/';
+            $imagepath = $storage_path_1.$file_name;
+            $matchpath = $storage_path_2.$result[0]->file;
+            return view('find.train')
+                ->with('uploaded', 'true')
+                ->with('result', $result)
+                ->with('matchpath', $matchpath)
+                ->with('imagepath', $imagepath);
         }
     }
 

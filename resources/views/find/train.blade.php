@@ -5,7 +5,7 @@
 @endsection
 
 @section('page-image')
-    <img class="img-responsive" src="img/png/map.png" alt="trakery" style="width:20%;height:20%;">
+    <img class="img-responsive" src=img/png/map.png alt="trakery" style="width:20%;height:20%;">
 @endsection
 
 @section('intro')
@@ -50,6 +50,16 @@
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         @if(!empty($result))
+                           <div class="col-sm-6 col-xs-12 portfolio-item">
+                                <h3>Image</h3>
+                                <img src={{ $imagepath }} class="img-responsive" alt="Image">
+                            </div>
+                            
+                            <div class="col-sm-6 col-xs-12 portfolio-item">
+                                <h3>Match</h3>
+                                <img src={{ $matchpath }} class="img-responsive" alt="Match">
+                            </div>
+                        &nbsp; <br>
                            <h3 style="color: #18bc9c">Name:</h3><h2>{{$result[0]->name}}</h2>
                            <h3 style="color: #18bc9c">Last Seen at:</h3><h2>{{$result[0]->location}}</h2>
                            <h3 style="color: #18bc9c">Time and Date:</h3><h2>{{$result[0]->created_at}}</h2>
@@ -93,8 +103,8 @@
                         <i class="fa fa-github-alt"></i> Github Page
                     </a></center>
                 </div>
-                <div class="col-lg-4 col-xs-12">
-                    <center><a href="/home/#contact" class="btn btn-lg btn-outline">
+                <div class="col-lg-4 col-xs-12 page-scroll">
+                    <center><a href="#contact" class="btn btn-lg btn-outline">
                         <i class="fa fa-envelope"></i> Contact Us
                     </a></center>
                 </div>

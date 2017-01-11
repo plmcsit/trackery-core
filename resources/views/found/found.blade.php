@@ -126,8 +126,8 @@ Trackery - FOUND
                         <i class="fa fa-github-alt"></i> Github Page
                     </a></center>
                 </div>
-                <div class="col-lg-4 col-xs-12">
-                    <center><a href="/home/#contact" class="btn btn-lg btn-outline">
+                <div class="col-lg-4 col-xs-12 page-scroll">
+                    <center><a href="#contact" class="btn btn-lg btn-outline">
                         <i class="fa fa-envelope"></i> Contact Us
                     </a></center>
                 </div>
