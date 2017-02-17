@@ -19,7 +19,7 @@ class FoundController extends Controller
         $message = $request->input('message');
         $location = $request->input('location');
         $file = $request->file('image');
-        $ext = array('jpg','JPEG','bmp','png');
+        $ext = array('jpg','JPEG','bmp','png', 'JPG');
         $valid = false;
         foreach($ext as $extension){
             if($file->getClientOriginalExtension() == $extension){
@@ -51,7 +51,7 @@ class FoundController extends Controller
             $teach = base_path('eigencore/teach.py');
             $exec_query = '/usr/bin/python '.$teach.' '.$image_name.' '.$storage.'/'.$file_name;
             exec($exec_query , $output);
-
+            //var_dump($output);
             return view('found.found')->with('uploaded', 'true');
         }
     }

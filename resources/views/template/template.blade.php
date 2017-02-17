@@ -186,7 +186,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        Copyright &copy; BertoBros Inc. 2016
+                        Copyright &copy; BertoBros Inc. 2016 - 2017
                     </div>
                 </div>
             </div>

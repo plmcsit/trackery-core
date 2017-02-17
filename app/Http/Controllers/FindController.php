@@ -22,7 +22,7 @@ class FindController extends Controller
     public function upload(Request $request)
     {
         $file = $request->file('image');
-        $ext = array('jpg','JPEG','bmp','png');
+        $ext = array('jpg','JPEG','bmp','png', 'JPG');
         $valid = false;
         foreach($ext as $extension){
             if($file->getClientOriginalExtension() == $extension){
@@ -50,7 +50,7 @@ class FindController extends Controller
             
             # static path for display
             $storage_path_1 = 'img/faces/recognize/';
-            $storage_path_2 = 'img/faces/train/';
+            $storage_path_2 = 'img/faces/teach/';
             $imagepath = $storage_path_1.$file_name;
             $matchpath = $storage_path_2.$result[0]->file;
             return view('find.train')

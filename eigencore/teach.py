@@ -42,3 +42,4 @@ def chooseFace(event, x, y, flags, param):
                     break
                 idx += 1
 
+
