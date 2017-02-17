@@ -38,6 +38,11 @@ class FoundController extends Controller
             $file->move($storage,$file_name);
             
             $now = date('Y-m-d H:i:s');
+            $teach = base_path('eigencore/teach.py');
+            $exec_query = '/usr/bin/python '.$teach.' '.$image_name.' '.$storage.'/'.$file_name;
+            exec($exec_query , $output);
+
+            //var_dump($output);
 
             DB::table('TrainInfo')->insert(
                 ['name' => $name,
@@ -47,11 +52,11 @@ class FoundController extends Controller
                  'file' => $file_name,
                  'created_at' => $now,
                  'updated_at' => $now, 
-                ]);
-            $teach = base_path('eigencore/teach.py');
-            $exec_query = '/usr/bin/python '.$teach.' '.$image_name.' '.$storage.'/'.$file_name;
-            exec($exec_query , $output);
-            //var_dump($output);
+                 'state' => $output[0],
+                 'old_mean' => $output[1],
+                 'new_mean' => $output[2],
+            ]);
+            
             return view('found.found')->with('uploaded', 'true');
         }
     }

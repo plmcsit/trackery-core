@@ -30,9 +30,54 @@ def train(trainList):
 
 
 def computeCoeff(img, mean, eiVecs):
-    imgR = np.ravel(cv2.resize(img, dim)) - mean
+    imgFlat = np.ravel(cv2.resize(img, dim))
+    oldMean = np.mean(imgFlat, 0)
+    imgState = "Normal"
+    if oldMean < 125.00:
+        imgState = "Dark"
+    if oldMean > 190.00:
+        imgState = "Bright"
+    print imgState
+    print oldMean
+
+    newMean, imgFlat = fixIllumination(imgState, oldMean, imgFlat)
+    print newMean
+
+    imgR = imgFlat - mean
     coeff = map(lambda v: np.dot(v, imgR), eiVecs)
     return coeff
+
+
+def fixIllumination(state, oMean, imgF):
+    newMean = 0
+    ctr = 0
+    
+    if state == "Normal":
+        newMean = oMean
+    
+    if state == "Bright":
+        subtr = oMean - 190.00 - 1
+        for pix in imgF:
+            if (pix - subtr) >= 0:
+                imgF[ctr] = pix - subtr
+            if (pix - subtr) < 0:
+                imgF[ctr] = 0
+            ctr = ctr + 1
+        newMean = np.mean(imgF, 0)
+    
+    if state == "Dark":
+        addit = 125.00 - oMean + 1
+        
+        for pix in imgF:
+            if (pix + addit) <= 255:
+                imgF[ctr] = pix + addit
+            if (pix + addit) > 255:
+                imgF[ctr] = 255
+            ctr = ctr + 1
+        newMean = np.mean(imgF, 0)
+
+    return newMean, imgF
+
 
 
 def computeLoss(tmpl, pred):

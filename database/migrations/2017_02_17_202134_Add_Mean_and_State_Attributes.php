@@ -1,0 +1,34 @@
+<?php
+
+use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
+
+class AddMeanAndStateAttributes extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::table('TrainInfo', function (Blueprint $table) {
+                $table->string('state');
+                $table->string('old_mean');
+                $table->string('new_mean');
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::table('TrainInfo', function (Blueprint $table) {
+            //
+        });
+    }
+}

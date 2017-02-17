@@ -44,9 +44,10 @@ class FindController extends Controller
             $image_to_recog = $storage.'/'.$file_name;
             $exec_query = '/usr/bin/python '.$python_script.' '.$image_to_recog;
             exec($exec_query , $output);
-            $path_like = $output[0].'%';
+            $path_like = $output[3].'%';
             $result = DB::table('TrainInfo')->where('file', 'like', $path_like)->take(1)->get();
             #var_dump($result);
+            // var_dump($exec_query);
             
             # static path for display
             $storage_path_1 = 'img/faces/recognize/';
