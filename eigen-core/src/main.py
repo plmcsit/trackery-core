@@ -12,7 +12,7 @@ def ensure_dir_exists(path):
 
 
 def take_training_photos(name, image):
-    facedata = "haarcascade_frontalface_default.xml"
+    facedata = "/home/aethelbert/Programming/PROGRAMMING/trackery-core-obj-1/eigen-core/haarcascade_frontalface_default.xml"
     cascade = cv2.CascadeClassifier(facedata)
     storage = "/home/aethelbert/Programming/PROGRAMMING/trackery-core-obj-1/public/img/faces/"
     img = cv2.imread(image)
@@ -32,15 +32,15 @@ def take_training_photos(name, image):
         sub_face = sub_face.scale(150, 150).gray()
         face_path = storage + "training_images_old/{}".format(name)
         ensure_dir_exists(face_path)
-        sub_face.save_to('{}/{}.pgm'.format(face_path, 1))
+        sub_face.save_to('{}/{}.jpg'.format(face_path, 1))
         
         # ILLUMINATION FIX
-        face = cv2.imread("{}/{}.pgm".format(face_path, 1))
+        face = cv2.imread("{}/{}.jpg".format(face_path, 1))
 
         # NORMAL 
         # cv2.imshow(image, face)
         # cv2.waitKey(0)
-
+        print "Image Trained Successfully!"
         idx1, idx2, idx3 = face.shape
         face = np.ravel(cv2.resize(face, (150,150)))    
         oldMean = np.mean(face, 0)
@@ -50,23 +50,22 @@ def take_training_photos(name, image):
         if oldMean > 190.00:
             imgState = "Bright"
         
-        # print imgState
-        # print oldMean
+        print imgState
+        print oldMean
 
         newMean, face = fixIllumination(imgState, oldMean, face)
-        # print newMean
+        print newMean
         face = np.reshape(face,(idx1, idx2, idx3))
-        cv2.imwrite('{}/{}.pgm'.format(face_path, 1), face)
+        face_path = storage + "training_images/{}".format(name)
+        cv2.imwrite('{}/{}.jpg'.format(face_path, 1), face)
 
         sub_face = gfx.Image(face)
         sub_face = sub_face.scale(150, 150).gray()
-        face_path = storage + "training_images/{}".format(name)
         ensure_dir_exists(face_path)
-        sub_face.save_to('{}/{}.pgm'.format(face_path, 1))
+        sub_face.save_to('{}/{}.jpg'.format(face_path, 1))
 
         # cv2.imshow(image, face)
         # cv2.waitKey(0)
-        print "Image Trained Successfully!"
     else:
         print "No Face Found!"
 
@@ -104,7 +103,7 @@ def fixIllumination(state, oMean, imgF):
 
 
 def recognize_photo(name, image):
-    facedata = "haarcascade_frontalface_default.xml"
+    facedata = "/home/aethelbert/Programming/PROGRAMMING/trackery-core-obj-1/eigen-core/haarcascade_frontalface_default.xml"
     cascade = cv2.CascadeClassifier(facedata)
     storage = "/home/aethelbert/Programming/PROGRAMMING/trackery-core-obj-1/public/img/faces/"
 
@@ -115,6 +114,7 @@ def recognize_photo(name, image):
     faces = cascade.detectMultiScale(miniframe)
     fnum = len(faces)
     if fnum != 0:
+        
         ct = faces.shape[0]
         f = faces[ct-1]
         x, y, w, h = [ v for v in f ]
@@ -126,11 +126,11 @@ def recognize_photo(name, image):
         
         face_path = storage + "recognize_old/{}".format(name)
         ensure_dir_exists(face_path)
-        sub_face.save_to('{}/{}.pgm'.format(face_path, 1))
+        sub_face.save_to('{}/{}.jpg'.format(face_path, 1))
         
         
         # ILLUMINATION FIX
-        face = cv2.imread("{}/{}.pgm".format(face_path, 1))
+        face = cv2.imread("{}/{}.jpg".format(face_path, 1))
 
         # NORMAL 
         # cv2.imshow(image, face)
@@ -151,13 +151,13 @@ def recognize_photo(name, image):
         newMean, face = fixIllumination(imgState, oldMean, face)
         # print newMean
         face = np.reshape(face,(idx1, idx2, idx3))
-        cv2.imwrite('{}/{}.pgm'.format(face_path, 1), face)
+        face_path = storage + "recognize/{}".format(name)
+        cv2.imwrite('{}/{}.jpg'.format(face_path, 1), face)
 
         sub_face = gfx.Image(face)
         sub_face = sub_face.scale(150, 150).gray()
-        face_path = storage + "recognize/{}".format(name)
         ensure_dir_exists(face_path)
-        sub_face.save_to('{}/{}.pgm'.format(face_path, 1))
+        sub_face.save_to('{}/{}.jpg'.format(face_path, 1))
 
 
         # cv2.imshow(image, face)

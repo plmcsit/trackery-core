@@ -12,7 +12,7 @@ class Image:
     def __init__(self, ocv_image):
         """Wrap opencv image."""
         self._img = ocv_image
-        self._face_cascade = 'haarcascade_frontalface_default.xml'
+        self._face_cascade = "/home/aethelbert/Programming/PROGRAMMING/trackery-core-obj-1/eigen-core/haarcascade_frontalface_default.xml"
 
     def gray(self):
         """
@@ -46,7 +46,7 @@ class Image:
             (0, 255, 0), 2)
 
     def face_areas(self):
-        return cv2.CascadeClassifier('haarcascade_frontalface_default.xml') \
+        return cv2.CascadeClassifier("/home/aethelbert/Programming/PROGRAMMING/trackery-core-obj-1/eigen-core/haarcascade_frontalface_default.xml") \
             .detectMultiScale(self._img, scaleFactor=1.2, minNeighbors=5,
                 minSize=(150, 150), flags=cv2.cv.CV_HAAR_SCALE_IMAGE)
 

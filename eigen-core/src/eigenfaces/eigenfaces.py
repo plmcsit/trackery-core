@@ -60,7 +60,7 @@ class EigenFaces(object):
         return X + self.mean_Image
 
     def get_target_images(self):
-        return glob.glob('target_image/*.pgm')
+        return glob.glob('target_image/*.jpg')
 
     def predict_face(self, X):
         min_class = -1
@@ -103,7 +103,7 @@ class EigenFaces(object):
 
 
 def show_image_for(img_class):
-    predicted_img = "training_images/%s/1.pgm" % (img_class)
+    predicted_img = "training_images/%s/1.jpg" % (img_class)
     img = Image.open(predicted_img)
     img.show()
 
