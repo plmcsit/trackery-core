@@ -1,5 +1,6 @@
 /node_modules
 /public/storage
+/public/img/faces
 /storage/*.key
 /vendor
 /.idea
