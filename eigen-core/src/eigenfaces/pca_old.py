@@ -34,7 +34,7 @@ def pca(X):
 
 
 # PCA SINGLE VALUE DECOMPOSITION
-a = np.arange(10000).reshape(500,20)
+a = np.arange(130000).reshape(2600,50)
 num_data, dimension = a.shape
 
 # print num_data

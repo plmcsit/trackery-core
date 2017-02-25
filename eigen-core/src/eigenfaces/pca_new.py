@@ -15,8 +15,8 @@ def pca(X):
 
     if dim > num_data:
         # PCA - compact trick used
-        start = t.default_timer()
         print "PCA DIMENSION REDUCTION METHOD"
+        start = t.default_timer()
         M = np.dot(X,X.T) # covariance matrix
         e,EV = np.linalg.eigh(M) # eigenvalues and eigenvectors
         tmp = np.dot(X.T,EV).T # this is the compact trick
@@ -42,7 +42,7 @@ def pca(X):
 
 
 # PCA SINGLE VALUE DECOMPOSITION
-a = np.arange(10000).reshape(500,20)
+a = np.arange(130000).reshape(2600,50)
 
 # PCA DIMENSION REDUCTION
 # a = np.arange(10000).reshape(2,5000)

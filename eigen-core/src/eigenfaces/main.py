@@ -3,7 +3,7 @@ import eigenfaces
 
 
 ef = eigenfaces.EigenFaces()
-ef.train("training_images")
+ef.train("/home/aethelbert/Programming/PROGRAMMING/trackery-core-obj-1/public/img/faces/training_images")
 ef.show_results()
 predicted_class = ef.predict_face_in_image(0)
 print(predicted_class)
