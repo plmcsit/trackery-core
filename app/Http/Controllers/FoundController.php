@@ -10,7 +10,8 @@ class FoundController extends Controller
 {
     public function index(){
         //echo "<h1>Found<h1>";
-        return view('found.found');
+        $result = false;
+        return view('found.found')->with('result', $result);
     }
 
     public function upload(Request $request)
@@ -21,6 +22,10 @@ class FoundController extends Controller
         $file = $request->file('image');
         $ext = array('jpg','JPEG','bmp','png', 'JPG');
         $valid = false;
+        $result = false;
+        $oldImg = "";
+        $newImg = "";
+            
         foreach($ext as $extension){
             if($file->getClientOriginalExtension() == $extension){
                 $valid = true;
@@ -28,31 +33,48 @@ class FoundController extends Controller
         }
         if(!$valid)
         {
-            return view('found.found')->with('valid', 'false');
+            return view('found.found')
+                        ->with('valid', 'false')
+                        ->with('result', $result);
         }
         else{
             # $storage = base_path('eigencore/test/teach');
-            $storage = base_path('public/img/faces/teach');
+            $storage = base_path('public/img/faces/found');
             $image_name = $this->GUIDRANDOM();
             $file_name = $image_name.".".$file->getClientOriginalExtension();
             $file->move($storage,$file_name);
-            
             $now = date('Y-m-d H:i:s');
-
-            DB::table('TrainInfo')->insert(
-                ['name' => $name,
-                 'location' => $location,
-                 'message' => $message,
-                 'found' => false,
-                 'file' => $file_name,
-                 'created_at' => $now,
-                 'updated_at' => $now, 
-                ]);
-            $teach = base_path('eigencore/teach.py');
+            $teach = base_path('eigen-core/src/main.py train');
             $exec_query = '/usr/bin/python '.$teach.' '.$image_name.' '.$storage.'/'.$file_name;
             exec($exec_query , $output);
-            //var_dump($output);
-            return view('found.found')->with('uploaded', 'true');
+
+            if($output[0] == "Image Trained Successfully!"){
+                DB::table('TrainInfo')->insert(
+                    ['name' => $name,
+                    'location' => $location,
+                    'message' => $message,
+                    'found' => false,
+                    'file' => $file_name,
+                    'created_at' => $now,
+                    'updated_at' => $now, 
+                    'state' => $output[1],
+                    'old_mean' => $output[2],
+                    'new_mean' => $output[3],
+                ]);
+                $result = true;
+                $oldImg = 'img/faces/training_images_old/'.$image_name.'/1.jpg';
+                $newImg = 'img/faces/training_images/'.$image_name.'/1.jpg';
+                return view('found.found')
+                        ->with('uploaded', 'true')
+                        ->with('result', $result)
+                        ->with('old_image', $oldImg)
+                        ->with('new_image', $newImg);
+            }
+            else{
+                return view('found.found')
+                            ->with('uploaded', 'false')
+                       ->with('result', $result);
+            }
         }
     }
 

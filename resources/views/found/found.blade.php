@@ -10,7 +10,11 @@ Trackery - FOUND
 
 @section('intro')
     @if(!empty($uploaded))
-        IMAGE UPLOADED!
+        @if($uploaded == "true")
+            IMAGE UPLOADED!
+        @else
+            NO FACE FOUND!
+        @endif
     @else
         FOUND MODULE
     @endif
@@ -46,6 +50,18 @@ Trackery - FOUND
             <div class="row">
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
+                        @if($result == true)
+                           <div class="col-sm-6 col-xs-12 portfolio-item">
+                                <h3>EXISTING</h3>
+                                <img src={{ $old_image }} class="img-responsive" alt="Old Image">
+                            </div>
+                            
+                            <div class="col-sm-6 col-xs-12 portfolio-item">
+                                <h3>ENHANCED</h3>
+                                <img src={{ $new_image }} class="img-responsive" alt="New Image">
+                            </div>
+                        &nbsp; <br>
+                        @endif
                         <form action="found" method="post" enctype="multipart/form-data">
                            {{-- <input type="hidden" name="_token" value="{{ csrf_token() }}"> --}}
                             {{ csrf_field() }}
