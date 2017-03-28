@@ -64,6 +64,7 @@
                            <h3 style="color: #18bc9c">Last Seen at:</h3><h2>{{$result[0]->location}}</h2>
                            <h3 style="color: #18bc9c">Time and Date:</h3><h2>{{$result[0]->created_at}}</h2>
                            <h3 style="color: #18bc9c">Other Info:</h3><h2>{{$result[0]->message}}</h2>
+                           <h3 style="color: #18bc9c">System Runtime:</h3><h2>{{$runtime}}</h2>
                         <br>
                         <center><a href="/find" class="btn btn-success btn-lg">
                             <i class="fa fa-photo"></i> Try Again.

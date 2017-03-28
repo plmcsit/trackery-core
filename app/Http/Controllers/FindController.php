@@ -53,11 +53,13 @@ class FindController extends Controller
             $storage_path_2 = 'img/faces/found/';
             $imagepath = $storage_path_1.$file_name;
             $matchpath = $storage_path_2.$result[0]->file;
+            $runtime = $output[1];
             return view('find.train')
                 ->with('uploaded', 'true')
                 ->with('result', $result)
                 ->with('matchpath', $matchpath)
-                ->with('imagepath', $imagepath);
+                ->with('imagepath', $imagepath)
+                ->with('runtime', $runtime);
         }
     }
 
